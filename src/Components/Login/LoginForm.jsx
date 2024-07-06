@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Input from '../Forms/Input';
+import Button from '../Forms/Button';
 
 const LoginForm = () => {
   const [username, setUsername] = React.useState('');
@@ -25,17 +27,21 @@ const LoginForm = () => {
     <section>
       <h1>Login</h1>
       <form action="" onSubmit={handleSubmit}>
-        <input
+        <Input
+          name="username"
+          label="Usuário"
           type="text"
           value={username}
-          onChange={({ target }) => setUsername(target.value)}
+          setValue={setUsername}
         />
-        <input
+        <Input
+          name="password"
+          label="Senha"
           type="password"
           value={password}
-          onChange={({ target }) => setPassword(target.value)}
+          setValue={setPassword}
         />
-        <button>Entrar</button>
+        <Button>Entrar</Button>
       </form>
       <Link to="/login/criar">Cadastro</Link>
     </section>
