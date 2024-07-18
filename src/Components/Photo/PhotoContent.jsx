@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 const PhotoContent = ({ data }) => {
   const { photo, comments } = data;
-  console.log(data);
 
   return (
     <div className={styles.photo}>
